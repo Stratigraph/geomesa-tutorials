@@ -8,7 +8,6 @@
 
 package com.example.geomesa.lambda;
 
-import kafka.admin.AdminUtils;
 import org.apache.commons.cli.BasicParser;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.HelpFormatter;
@@ -27,7 +26,6 @@ import org.locationtech.geomesa.lambda.data.LambdaDataStore;
 import org.locationtech.geomesa.lambda.data.LambdaDataStoreFactory;
 import org.locationtech.geomesa.lambda.data.LambdaDataStoreFactory$Params$Accumulo$;
 import org.locationtech.geomesa.lambda.data.LambdaDataStoreFactory$Params$Kafka$;
-import org.locationtech.geomesa.lambda.stream.kafka.KafkaStore;
 import org.locationtech.geomesa.utils.geotools.SimpleFeatureTypes;
 import org.opengis.feature.simple.SimpleFeature;
 import org.opengis.feature.simple.SimpleFeatureType;
@@ -39,10 +37,6 @@ import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-
-//import org.locationtech.geomesa.kafka.KafkaDataStoreHelper;
-//import org.locationtech.geomesa.kafka.ReplayConfig;
-//import org.locationtech.geomesa.kafka.ReplayTimeHelper;
 
 public class LambdaQuickStart implements Runnable {
 
