@@ -216,6 +216,8 @@ public class LambdaQuickStart implements Runnable {
       } while (persisted < COUNT || total > COUNT);
     } catch (Exception e) {
       throw new RuntimeException(e);
+    } finally {
+      ds.dispose();
     }
   }
 }
